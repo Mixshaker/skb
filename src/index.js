@@ -21,7 +21,8 @@ app.get('/task2b', (req, res) => {
   var arr;
 
   var fullName = req.query.fullname;
-  if (fullName.match(/^[A-Za-zА-Яа-я ]+/i)) {
+  // if (fullName.match(/^[A-Za-zА-Яа-я ]+/i)) {
+  if (fullName.search(/[\d_\/]+/) == (-1)) {
 
   arr = fullName.split(" ");
 
